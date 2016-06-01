@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ActivityForResult</string>
+    <string name="inicia">Inicia</string>
+    <string name="introduce_tus_datos">Introduce tus datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="genero">Género preferido</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="sug_nombre">Nombre??</string>
+</resources>

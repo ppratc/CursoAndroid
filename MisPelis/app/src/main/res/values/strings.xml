@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mis Pelis</string>
+    <string name="inicia">Inicia</string>
+    <string name="introduce_tus_datos">Introduce tus datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="genero">Género preferido</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="sug_nombre">Nombre??</string>
+</resources>

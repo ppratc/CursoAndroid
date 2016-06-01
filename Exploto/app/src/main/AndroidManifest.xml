@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.curso.sergio.exploto">
+
+    <!-- Define un permiso personalizado -->
+    <permission
+        android:name="com.curso.sergio.exploto.PERMISO_EXPLOSION"
+        android:description="@string/descripcion"
+        android:label="Actividad peligrosa" >
+    </permission>
+
+    <!--  Añade el permiso PERMISO_EXPLOSION para esta aplicación  -->
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+
+        android:permission="com.curso.sergio.exploto.PERMISO_EXPLOSION" >
+        <activity
+            android:name=".Exploto"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--  Configura el Intent Filter para darle un nombre a la acción peligrosa  -->
+            <intent-filter>
+                <action android:name="com.curso.sergio.exploto.ACCION_PELIGROSA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

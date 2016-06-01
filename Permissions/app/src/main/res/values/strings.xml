@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permissions</string>
+    <string name="inicia_actividad_peligrosa">Inicia actividad peligrosa</string>
+    <string name="descripcion">Autorizo acceso a actividad muy peligrosa</string>
+</resources>

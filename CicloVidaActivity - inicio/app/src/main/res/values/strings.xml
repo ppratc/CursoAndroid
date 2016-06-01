@@ -1,0 +1,10 @@
+<resources>
+    <string name="nombre_app">CicloVidaActivity</string>
+    <string name="onCreate">llamadas a onCreate(): 0</string>
+    <string name="onStart">llamadas a onStart(): 0</string>
+    <string name="onResume">llamadas a onResume(): 0</string>
+    <string name="onRestart">llamadas a onRestart(): 0</string>
+    <string name="boton">Inicia Activity Dos</string>
+    <string name="titulo_activity_dos">Activity Dos</string>
+    <string name="cierra">Cierra Activity</string>
+</resources>

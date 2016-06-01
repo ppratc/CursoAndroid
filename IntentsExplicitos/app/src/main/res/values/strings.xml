@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IntentsExplicitos</string>
+    <string name="seleccion">Selecciona tu peli preferida</string>
+    <string name="el_silencio">El silencio de los corderos</string>
+    <string name="matrix">The Matrix</string>
+    <string name="el_renacido">El Renacido</string>
+</resources>
