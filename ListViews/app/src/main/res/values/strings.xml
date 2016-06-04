@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ListViews</string>
+    <string-array name="cosas_aprendidas">
+        <item>Plataforma Android</item>
+        <item>Uso del emulador</item>
+        <item>Layouts básicos</item>
+        <item>Uso de botones</item>
+        <item>Intents implícitos</item>
+        <item>Intents explícitos</item>
+        <item>Uso de Views simples</item>
+        <item>Introducción a ViewGroups</item>
+        <item>Adapters</item>
+    </string-array>
+</resources>
