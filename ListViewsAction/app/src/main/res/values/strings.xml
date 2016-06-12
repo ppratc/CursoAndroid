@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ListViewsAction</string>
+    <string-array name="cosas_aprendidas">
+        <item>Plataforma Android</item>
+        <item>Uso del emulador</item>
+        <item>Layouts básicos</item>
+        <item>Uso de botones</item>
+        <item>Intents implícitos</item>
+        <item>Intents explícitos</item>
+        <item>Uso de Views simples</item>
+        <item>Introducción a ViewGroups</item>
+        <item>Adapters</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_settings">Elimina todos</string>
+    <string name="action_favorite">Primer elemento eliminado</string>
+    <string name="context_option">Elimina este elemento</string>
+    <string name="search_option">Busca información en la web</string>
+</resources>
