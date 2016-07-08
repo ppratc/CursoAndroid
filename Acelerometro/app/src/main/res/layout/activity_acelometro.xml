@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/valor_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:text="@string/x_string"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/valor_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/valor_x"
+        android:padding="5dp"
+        android:text="@string/y_string"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/valor_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/valor_y"
+        android:padding="5dp"
+        android:text="@string/z_string"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/valor_real_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/valor_x"
+        android:text="Sin datos"
+        android:padding="5dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/valor_real_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valor_real_x"
+        android:layout_toRightOf="@+id/valor_y"
+        android:text="Sin datos"
+        android:padding="5dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/valor_real_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valor_real_y"
+        android:layout_toRightOf="@+id/valor_z"
+        android:text="Sin datos"
+        android:padding="5dp"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>

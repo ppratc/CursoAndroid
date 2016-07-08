@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Acelerometro</string>
+    <string name="y_string">Lectura de Y:</string>
+    <string name="x_string">Lectura de X:</string>
+    <string name="z_string">Lectura de Z:</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Alarmas</string>
+    <string name="set_single_alarm">Alarma única</string>
+    <string name="set_repeating_alarm">Alarma con repeticiones</string>
+    <string name="cancel_repeating_alarm">Cancelar alarma con repeticiones</string>
+    <string name="set_inexact_repeating_alarm">Alarma con repeticiones inexacta</string>
+</resources>

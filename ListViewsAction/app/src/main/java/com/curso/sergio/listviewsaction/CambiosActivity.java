@@ -61,7 +61,8 @@ public class CambiosActivity extends AppCompatActivity {
 
         anade=true;
        nombre.setVisibility(View.VISIBLE);
-
+        posicion.setVisibility(View.INVISIBLE);
+        mTVnumberView.setVisibility(View.INVISIBLE);
        result.putExtra("operacion",ELEMENTO_FINAL);
 
     }
@@ -82,6 +83,7 @@ public class CambiosActivity extends AppCompatActivity {
     public void elimina_elemento(View view){
 
         anade=false;
+        nombre.setVisibility(View.INVISIBLE);
         posicion.setVisibility(View.VISIBLE);
         mTVnumberView.setVisibility(View.VISIBLE);
 
@@ -91,6 +93,9 @@ public class CambiosActivity extends AppCompatActivity {
 
     public void elimina_todo(View view){
 
+        nombre.setVisibility(View.INVISIBLE);
+        posicion.setVisibility(View.INVISIBLE);
+        mTVnumberView.setVisibility(View.INVISIBLE);
         anade=false;
         result.putExtra("operacion",ELIMINA_TODO);
 

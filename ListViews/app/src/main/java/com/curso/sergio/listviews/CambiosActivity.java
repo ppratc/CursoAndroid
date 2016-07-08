@@ -45,11 +45,9 @@ public class CambiosActivity extends AppCompatActivity {
         posicion.setMinValue(1);
         posicion.setMaxValue(elementos);
         posicion.setWrapSelectorWheel(true);
-        posicion.setOnValueChangedListener( new NumberPicker.
-                OnValueChangeListener() {
+        posicion.setOnValueChangedListener( new NumberPicker.OnValueChangeListener() {
             @Override
-            public void onValueChange(NumberPicker picker, int
-                    oldVal, int newVal) {
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
                 pos = newVal;
             }
         });
