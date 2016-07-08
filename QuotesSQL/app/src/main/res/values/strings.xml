@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QuotesSQL</string>
+    <string name="action_add">Añadir</string>
+
+    <!-- Diseño de Form -->
+
+    <string name="title_activity_form">Nueva Frase</string>
+    <string name="quote">Frase</string>
+    <string name="author">Autor</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+</resources>
