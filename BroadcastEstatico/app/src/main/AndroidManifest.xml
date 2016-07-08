@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.curso.sergio.broadcastestatico">
+
+    <!--Permiso necesario para el Intent-->
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BroadcastEstaticoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Defino mis receivers, los registro de manera estática
+            enabled = true, está activado por defecto
+            exported = true, lo puedo cargar desde una aplicación externa
+        -->
+        <receiver
+            android:name=".MiReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <!--El intent filter me especifica qué Intents activan el Receiver
+                En mi caso lo hacen los Intents con action del tipo:
+                "com.curso.sergio.BroadcastEstatico.show_toast"
+            -->
+            <intent-filter>
+                <action android:name="com.curso.sergio.BroadcastEstatico.show_toast" >
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

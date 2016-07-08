@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    1. Si voy a usar la API23 debo ejecutar el siguiente comando en la consola para ver el texto de la notificación
+
+        adb shell dumpsys notification - -noredact
+
+    2. Creo el layout de mi notificación personalizada, en este caso, notificacion.xml
+
+    3. Añado el Drawable descarga.png
+
+    4. Creo las variables necesarias en la CargaImagenNotificationActivity para gestionar la notificación
+
+        // Notification ID para identificar la notificación
+    private static final int MY_NOTIFICATION_ID = 1;
+
+    // Contador de notificaciones
+    private int mNotificationCount;
+
+
+    private final CharSequence tickerText = "Cargando imagen";
+    private final CharSequence contentText = "Cargando";
+
+
+    private NotificationCompat.Builder notificationBuilder;
+
+    private Intent mNotificationIntent;
+    private PendingIntent mContentIntent;
+    private NotificationManager mNotificationManager;
+
+    private long[] mVibratePattern = { 0, 200, 200, 300 };
+
+    //Este RemoteViews me permitirá crear el layout de la notificación
+    RemoteViews mContentView = new RemoteViews(
+            "com.curso.sergio.cargaimagennotification",
+            R.layout.notificacion);
+
+    private boolean cargado = false;
+
+    5. Creo el Intent, el PendingIntent y el NotificationManager
+        en el onCreate de CargaImagenNotificationActivity para gestionar la notificación
+        y que podamos abrir NotificationSubActivity desde la notificación
+
+         mNotificationIntent = new Intent(CargaImagenNotificationActivity.this,
+                NotificationSubActivity.class);
+        mContentIntent = PendingIntent.getActivity(CargaImagenNotificationActivity.this, 0,
+                mNotificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+    6. Creo la Activity NotificationSubActivity (Empty Activity) y su layout correspondiente (activity_notification_sub.xml)
+        con un único textview
+
+    7. Añado en el método onPreExecute de mi AsyncTask todos los métodos necesarios para
+        crear la notificación y hacerla visible
+
+        //Configuro el texto a mostrar en la notificación
+            mContentView.setTextViewText(R.id.text, contentText + " ("
+                    + ++mNotificationCount + ")");
+
+            //Ajusto los parámetros de mi notificación
+            notificationBuilder = new NotificationCompat.Builder(CargaImagenNotificationActivity.this)
+                    .setTicker(tickerText)
+                    .setContentText("Subject")
+                    .setSmallIcon(android.R.drawable.stat_sys_warning)
+                    .setAutoCancel(true)
+                    .setContentIntent(mContentIntent)
+                    .setVibrate(mVibratePattern)
+                    .setContent(mContentView);
+
+            //Le paso a la otra activity el valor cargado=false
+            mNotificationIntent.putExtra("CARGADO",cargado);
+
+            //Paso la Notification al NotificationManager:
+            mNotificationManager.notify(MY_NOTIFICATION_ID,
+                    notificationBuilder.build());
+
+   8. El método doInBackground no registra cambios
+
+   9. Añado los métodos necesarios en el método onPostExecute para que la notificación cambie
+        su texto cuando haya cargado el fichero o para lanzar una nueva
+
+         cargado=true;
+            miProgressBar.setVisibility(ProgressBar.INVISIBLE);
+            miView.setImageBitmap(result);
+
+            //La paso a la NotificationSubActivity el cargado=true para que cambie el textView a Cargado
+            mNotificationIntent.putExtra("CARGADO",cargado);
+
+            //Asocio el ContentIntent con mNotificationIntent para poder pasar el Intent
+            mContentIntent = PendingIntent.getActivity(CargaImagenNotificationActivity.this, 0,
+                    mNotificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            //mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+            //Cambio el texto de la notificación
+            mContentView.setTextViewText(R.id.text,"¡Cargado!");
+
+            //Envío la nueva notificación
+            mNotificationManager.notify(MY_NOTIFICATION_ID,
+                    notificationBuilder.build());
+
+    10. Modifico la NotificationSubActivity para que reciba el Extra del PendingIntent con el boolean
+        que le permite cambiar el texto del TextView si el archivo se ha cargado
+
+       TextView texto = (TextView) findViewById(R.id.textView1);
+
+       //Recibo el boolean de la otra clase que me indica si el archivo está cargado o no
+       Intent recibo = getIntent();
+
+        boolean cargado=false;
+        if(recibo !=null) {
+            cargado = recibo.getBooleanExtra("CARGADO",false);
+        }
+
+        //Si el archivo se ha cargado, cambio el texto que muestra el estado de carga en la Activity
+        if(cargado){texto.setText("Cargado");}
+-->
+<resources></resources>

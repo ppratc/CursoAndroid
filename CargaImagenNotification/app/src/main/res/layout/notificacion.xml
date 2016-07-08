@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/descarga" />
+
+    <TextView
+        android:id="@+id/text"
+        android:text="Prueba"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="#080808"
+        android:textSize="24sp"
+        android:layout_toRightOf="@+id/image"/>
+
+</RelativeLayout>
